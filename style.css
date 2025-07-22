@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth; /* This makes the scroll behavious of internal links have a smooth animation */
+  font-size: 12px;
 }
 
 body {
@@ -15,6 +16,8 @@ body {
   color: black;
   padding: 5px 0; /* top&down left&right */
   margin: 20px 30px 20px 30px; /* top right down left */
+
+  position: relative;
 }
 
 #brands-section li {
@@ -33,12 +36,13 @@ body {
 
 #access-buttons {
   background-color: lightgray;
+
 }
 
 #access-buttons button {
   width: 50px;
   height: 50px;
-  border-radius: 50px;
+  border-radius: 25px;
 }
 
 #access-buttons a {
@@ -51,3 +55,175 @@ body {
 }
 
 /* New CSS from here */
+
+/* #img-container {
+  height: 120px;
+  width: 120px;
+  border: 1px solid black;
+  border-radius: 60px;
+  overflow: hidden;
+} */
+
+#main-header h1 span {
+  color: #a70184;
+}
+
+#main-header span + p {
+  font-size: 40px;
+  margin: 0;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+
+}
+
+#main-header >span {
+  text-decoration: underline;
+}
+
+#access-buttons button:hover {
+  background-color: #a70184;
+}
+
+#access-buttons button:active {
+  background-color: #55595c;
+}
+
+#brands-section ul li:hover {
+  background-color: chocolate;
+}
+
+#brands-section ul li::marker {
+  /* color: #a70184; */
+  content: "👾 ";
+  font-size: 20px;
+}
+
+#brands-section ul li:hover::after {
+  content: " Sale!";
+}
+
+#access-buttons {
+
+  height: 150px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+}
+
+.card {
+  background-color: #55595c;
+  width: 200px;
+  height: 380px;
+  border-radius: 10px;
+  color: white;
+}
+
+.games-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
+.card:hover {
+  background-color: #a70184;
+}
+
+.card:hover img {
+  /* when I hover over the card, the image size changes */
+  height: 200px;
+  width: 140px;
+
+  
+}
+
+#access-buttons {
+  position: sticky;
+  top: 30px;
+}
+
+#brands-section ul li {
+  margin: 0 10%;
+}
+
+#brands-section ul li::first-letter {
+  font-size: 1.2em; /* 120% of the original value */
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+button {
+  font-size: 0.8rem;
+}
+
+
+/* We consider EVERYTHING before this styles for mobile, and a base for other devices */
+
+/* TABLETS (from 600px) */
+
+@media (width > 600px) {
+
+  body {
+    background-color: #a70184;
+  }
+
+  #access-buttons {
+    justify-content: center;
+  }
+
+  .games-container {
+    gap: 50px
+  }
+
+  html {
+    font-size: 30px;
+  }
+
+}
+
+/* DESKTOP (from 1080px)*/
+
+@media (width > 1080px) {
+
+  body {
+    background-color: white;
+  }
+
+  .games-container {
+    gap: 100px
+  }
+
+  #brands-section ul li {
+    font-size: 36px;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+}
